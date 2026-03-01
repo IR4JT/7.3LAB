@@ -6,9 +6,8 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 let { data: Books, error } = await supabase
   .from('Books')
   .select('*')
-
+  
 for (let book of Books) {
     let bookList = document.getElementById('books');
-    bookList = document.getElementById('books'):
     bookList.innerHTML += `<li>${book.title}</li>`
 }
